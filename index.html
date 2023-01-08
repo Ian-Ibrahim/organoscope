@@ -5,22 +5,509 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://kit.fontawesome.com/c5d17fdd58.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
     <title>Organo scope</title>
-    <style>
-        .h-full{
-            background-color: rgba(0, 0,0, 0.11);
-        }
-        
-    </style>
+
 </head>
 <body>
-    <section class="h-screen bg-cover" style="background-image: url('https://images.unsplash.com/photo-1553028826-f4804a6dba3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')">
-        <div class="flex h-full w-full items-center justify-center container mx-auto px-8">
-          <div class="max-w-2xl text-center">
-            <h1 class="text-3xl sm:text-5xl capitalize tracking-widest text-white lg:text-7xl">Coming Soon</h1>
-            <p class="mt-6 lg:text-lg text-white">Our website is under production</p>
-          </div>
+    <section>
+        
+    </section>
+    <section> 
+        <div class="w-full h-full ">
+            <div id="modal-bg" class=" z-50  hidden "></div>
+            <div id="modal-box" class="z-50 sm:w-[385px] sm:min-w-[40vw] min-w-[80vw] min-h-[50vh] flex flex-col  gap-2 -translate-y-1/2 p-6 bg-white rounded-lg top-1/2 left-1/2 -translate-x-1/2 fixed hidden">
+                <div class="mt-8 lg:-mx-6 lg:flex lg:items-center ">
+                    <div class=" w-9/12 p-2">
+                        <img class="object-cover w-full rounded-lg " id="modal-img" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"alt="">
+                        <div class="flex items-center mt-6">
+                            <div class="mx-4">
+                                <h1 id="modal-title" class="text-sm font-semibold"></h1>
+                                <p id="modal-role" class="text-sm text-gray-500 "></p>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class=" w-full ">
+                        <p  class="text-sm text-green uppercase font-semibold">Background</p>
+                        <div  id="modal-desc" class=" modal-team-background mt-3 text-sm  md:text-sm">
+                            
+                        </div>                        
+                    </div>
+                </div>
+              <button id="modal-close" class="p-3 bg-[#3f3e2a] rounded-lg w-full text-white ">Back</button>
+            </div>
         </div>
-      </section>
+        <div class="flex justify-center items-start my-2">
+            <div class="w-full  sm:w-10/12 md:w-1/2 my-1">
+                <h2 class="text-sm font-medium uppercase mb-2">Leadership</h2>
+              <h2 class="text-4xl font-semibold  mb-2">Meet our <span class="text-lime">team</span> </h2>
+              <p class="text-sm">** click on card to view more</p>
+              <div class=" place-self-start w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/hildabeda.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Hildabeda Lukulu</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            Hildabeda is a former staff at Barclays Bank(k) ltd with 18 years experience.
+                            <span style="font-weight: 500; color: #a7b623;">Educational background</span>
+                            <ul style=" padding-left: .5em;">
+                                <li>-Pursuing Degree in Leadership, Administration and Management- North
+                                    Western Christian UniversityFlorida- USA</li>
+                                <li>-Tumu Tumu Girls High School &#39;A&#39; level KACE Karatina- Nyeri</li>
+                                <li>-Mary Mount Girls Sec &#39;O&#39; level KCE--Molo- Nakuru</li>
+                                <li>-St. Marys Primary--CPE-- Molo-- Nakuru</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/elizabeth-director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Elizabeth Akinyi Okumu</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            Elizabeth is a Certified Public Accountant of Kenya, brings many years of experience in the agriculture sector as a financial expert who has worked around the East African region. Elizabeth has a deep understanding of finance in Agriculture businesses encompassing production, processing, and marketing.
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/iscar-director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Iscar </br>Obuogoh</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            Iscar is former banker and currently a Psychogeriatric and Palliative Care Nurse in Switzerland. 
+                            She has a passion for farming and community empowerment.
+                             As a nurse she has attended various trainings and workshops on social and community empowerment.
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/olare-director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Maureen Orlare</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            Maureen is a PhD candidate in the process of completing her doctorate in Business Administration, specializing in leadership.
+                            She is a seasoned entrepreneur, business, and leadership coach with extensive experience in business consulting.
+                            Maureen is a leadership coach who inspires both potential and experienced leaders break free from their
+                            personal glass ceilings and be more successful and happier using the quickest possible routes.
+                            Most of all, Maureen loves passing on tried and tested advice on what she has picked up along the way
+                            to help others (individual and businesses) achievetheir dreams.
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/lydia-director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Lydia Kasera</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            Lydia Kasera is a creative, results-oriented Education and Curriculum Development Specialist, Human Resource Capacity Building Expert and Organisational Development expert with over 20 years experience in the field.
+                            Her particular strengths are in organisational development, supporting senior and executive business management in communication and organisational transformation, Education Programme Development and Teaching. 
+                            She is an experienced and hands-on Change Management practitioner and Human Resource Management expert
+                            with over twenty years practical experience working with both the public and private sectors in Africa and UK.
+                            Lydia has been engaged as Project Team Leader or Project Director in Human Resource Management (HRM) Consultancies, Institutional Development and Restructuring, Strategic Planning, Public Service Reform, Change Management, Organizational Restructuring and Corporate Reorganization.
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/grace-director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Grace Aketch Ouma</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            Grace is a career administrator for over 10 years with the Kenyan government.
+                            She is currently working with ministry of interior and citizens services as a field officer stationed at Bunyala sub county, Busia.
+                            <span style="display:block;font-weight: 500; color: #a7b623;">Educational background</span>
+                            <ul style=" padding-left: .5em;">
+                                <li>-Master of Science Degree in Governance and leadership from JKUAT</li>
+                                <li>-Bachelor of Arts Degree in sociology from Uiversity of Nairobi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/olivia-director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Olivia Lillian Achieng O'bell</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            A career correctional expert of over 25 years experience with vast organization operations and strategic management experience. Currently the Director Rehabilitation, Corrections and Oender Management State Department of corrections coordination of
+                            National Government.
+                            <span style="display:block;font-weight: 500; color: #a7b623;">Educational background</span>
+                            <ul style=" padding-left: .5em;">
+                                <li>-Postgraduate Diploma in Governance, Democratization and Public policy, Erasmus university of Rotterdam, The Hague
+                                    Netherlands</li>
+                                <li>-Master&#39;s degree in International conflict management University of Nairobi</li>
+                                <li>-Bachelor&#39;s degree Public administration (Hons) Sociology & Economics Panjub University India.</li>
+                                <li>-A Professional  Certified Mediator by MTI International USA through its affiliate Mediation Training Institute (MTI) East Africa </li>
+                            </ul>
+                            Holder of an Ombudsman Award for Transformational Leadership from, Commission on Administrative Justice Kenya besides a
+                            host of recognitions from United Nation for her Contribution to Peace keeping Mission Environment.
+                            An advisor of the Police & Corrections Forum(PCF) with the International Youth fellowship(IYF), a South Korean NGO.
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/miriam director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Mildred   Omondi</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            She has worked at Kenyatta hospital as a social worker Nairobi Hospice and Coast Hospice as fund raising/ PR manager and volunteers coordinator and at ICRH international center for reproductive health as a research assistant.
+                            She is currently in business in Nairobi. A graduate from UON with a degree major in Sociology and minor in communication.
+                            Experience. 
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                    <div class="mb-6 relative">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" src="media/manyala-director.jpg" alt="photo">
+                        <a  href="#"class="pointer rounded-full flex justify-center p-2 border-4 border-white absolute bottom-0 right-0.5 z-50 text-white bg-green ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Elizabeth Manyala Mbare</p>
+                        <p class="text-base text-brown font-normal team-role">Director</p>
+                        <div class="hidden team-background">
+                            She is a visionary leader, a researcher using both qualitative and quantitative research methodologies, and a project
+                            designer, coordinator, and implementer of various successful implemented EU projects in Finland and African
+                            countries. She has a wealth of work experience as a Programme Manager in the Humanitarian sector and at the
+                            senior management level in the county government of Kenya, where I exercised an oversight role to the executive
+                            arm of the county government of Kenya to ensure that the implementation of County Integrated Development
+                            Plans (CIDP) is executed.
+                            <span style="display:block;font-weight: 500; color: #a7b623;">Educational background</span>
+                            <ul style=" padding-left: .5em;">
+                                <li>-Doctoral candidate in Leadership and Governance at Jomo Kenyatta University of Agriculture and Technology in Kenya.</li>
+                                <li>-Master of Business Administration degree in Leadership and Service Design from Novia University of Applied Sciences in Finland</li>
+                                <li>- Master of Arts degree in Rural Sociology and Community Development from the University of Nairobi.</li>
+                                <li>-A Professional  Certified Mediator by MTI International USA through its affiliate Mediation Training Institute (MTI) East Africa </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </section>
+    <section>
+        <!-- <img src="media/world-map-copyright.webp" alt=""> -->
+        <div class="flex justify-center items-start my-2">
+            <div class="w-full sm:w-10/12 md:w-1/2 my-1">
+              <h2 class="text-sm font-medium uppercase mb-2">Our activities</h2>
+              <h2 class="text-4xl font-semibold  mb-2">Learn more about <span class="text-lime">BSF farming</span> </h2>
+              <ul class="flex flex-col">
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(1)">
+                    <h2
+                      @click="handleClick()"
+                      class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                    >
+                      <span>What is Organo scope aim?</span>
+                      <svg
+                        :class="handleRotate()"
+                        class="fill-current text-green h-6 w-6 transform transition-transform duration-500"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                      </svg>
+                    </h2>
+                    <div
+                      class="border-l-2 border-lime overflow-hidden max-h-0 duration-500 transition-all"
+                      x-ref="tab"
+                      :style="handleToggle()"
+                    >
+                      <p class="p-3 text-gray-900">
+                        Produce both animal feed and fertilizer in sustainable quantities that will impact affordability and accesability by the breeding of Black Soldier fly using pre-identified waste products.
+                      </p>
+                    </div>
+                  </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(2)">
+                  <h2
+                    @click="handleClick()"
+                    class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                  >
+                    <span>What is BSF?</span>
+                    <svg
+                      :class="handleRotate()"
+                      class="fill-current text-green h-6 w-6 transform transition-transform duration-500"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                  </h2>
+                  <div
+                    x-ref="tab"
+                    :style="handleToggle()"
+                    class="border-l-2 border-lime overflow-hidden max-h-0 duration-500 transition-all"
+                  >
+                    <p class="p-3 text-gray-900">
+                        BSF(Black Soldier Fly) are the type of flies that are slightly bigger than the normal flies and are known for their extraordinary ability to consume and reduce organic waste. It is a non-pest insect species that can convert diverse (non-value) organic waste streams into biomass which can then be used to produce animal feed.
+                    </p>
+                  </div>
+                </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(3)">
+                    <h2
+                      @click="handleClick()"
+                      class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                    >
+                      <span>Why BSF?</span>
+                      <svg
+                        :class="handleRotate()"
+                        class="fill-current text-green h-6 w-6 transform transition-transform duration-500"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                      </svg>
+                    </h2>
+                    <div
+                      class="border-l-2 border-lime overflow-hidden max-h-0 duration-500 transition-all"
+                      x-ref="tab"
+                      :style="handleToggle()"
+                    >
+                      <p class="p-3 text-gray-900">
+                        At larvae stage BSF can transform organic waste into high quality protein which can be used as alternative protein additive in animal feed.
+                      </p>
+                    </div>
+                  </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(4)">
+                  <h2
+                    @click="handleClick()"
+                    class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                  >
+                    <span>What products do we obtained from BSF?</span>
+                    <svg
+                      :class="handleRotate()"
+                      class="fill-current text-green h-6 w-6 transform transition-transform duration-500"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                  </h2>
+                  <div
+                    class="border-l-2 border-lime overflow-hidden max-h-0 duration-500 transition-all"
+                    x-ref="tab"
+                    :style="handleToggle()"
+                  >
+                    <p class="p-3 text-gray-900">
+                      <ul class="p-2">
+                        <li><span class="font-semibold">Organo meal</span> <div class="pl-2">This is a feed containing 55% protein which can be used for Chickens,fish and Pets(monogastric animals).</div>
+                         </li>
+                        <li><span class="font-semibold">Organo oil</span> <div class="pl-2">This is a pure natural oild with high lauric acid concentration which is used as aquaculture feed, pet food and alternative to fish,coconut and palm oil.</div>
+                        </li>
+                        <li><span class="font-semibold">Organo soil </span><div class="pl-2">This is an organic soil conditioner prepared from larval residue containing high nitrogen, phosphorus and potassium which are essential in soil fertility.</div>
+                        </li>
+                      </ul>
+                    </p>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+    </section>
+    <section>
+        <footer class="relative bg-green pt-8 pb-6 text-white">
+            <div class="container mx-auto px-4">
+              <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-full lg:w-5/12 px-4">
+                  <h4 class="text-6xl font-semibold ">Let&#39;s keep in touch!</h4>
+                  <h5 class="text-lg mt-0 mb-2 text-gray-300 ">
+                    Find us on any of these platforms
+                  </h5>
+                  <div class="mt-6 lg:mb-0 mb-6 text-gray-100">
+                    <button class="border-gray-50 border  font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social " type="button">
+                      <i class="fab fa-twitter"></i></button>
+                      <button class=" border-gray-50 border font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social " type="button">
+                        <i class="fa-brands fa-facebook-f"></i></button>
+                      <button class="border-gray-50 border font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social" type="button">
+                      <i class="fab fa-dribbble"></i></button>
+                      <button class=" border-gray-50 border font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social" type="button">
+                      <i class="fab fa-instagram"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="w-full lg:w-7/12 px-4 bg-gray">
+                  <div class="flex flex-wrap items-top mb-6">
+                    <div class="w-full lg:w-7/12 px-4 ml-auto  ">
+                      <span class="  block uppercase text-gray-50  text-sm font-semibold mb-2">Address</span>
+                     
+                          <div class="text-gray-200 block pb-2 text-lg">
+                            <p class="country">Kenya</p>
+                            <p>P.O. Box 3920, City Square</p>
+                            <p>Nairobi</p>
+                          </div>
+                        
+                    </div>
+                    <div class="w-full lg:w-4/12 px-4 ">
+                      <span class="block uppercase text-gray-50 text-sm font-semibold mb-2 text-sm">Say Hello</span>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a class="text-gray-200 hover:text-blueGray-800 font-semibold block pb-2 text-lg" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">admin@organoscope.co.ke</a>
+                        </li>
+                        <li>
+                          <a class="text-gray-200 hover:text-blueGray-800 font-semibold block pb-2 text-lg" href="https://creative-tim.com/terms?ref=njs-profile">+254712345678</a>
+                        </li>
+                        <li>
+                          <a class="text-gray-200 hover:text-blueGray-800 font-semibold block pb-2 text-lg" href="https://creative-tim.com/privacy?ref=njs-profile">+254712345678</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-6 border-gray-900">
+              <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                  <div class="text-sm text-blueGray-500  py-1">
+                    Copyright © <span id="get-current-year">2023</span> Organo scope by
+                    <a href="https://www.creative-tim.com?ref=njs-profile" class="text-blueGray-500 font-semibold hover:text-blueGray-800">Ian okova</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </section>
 </body>
+<script>
+    const d = new Date();
+    document.getElementById("get-current-year").innerHTML=d.getFullYear()
+    feather.replace()
+  </script>
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.store('accordion', {
+        tab: 0
+      });
+      
+      Alpine.data('accordion', (idx) => ({
+        init() {
+          this.idx = idx;
+        },
+        idx: -1,
+        handleClick() {
+          this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+        },
+        handleRotate() {
+          return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+        },
+        handleToggle() {
+          return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+        }
+      }));
+    })
+  </script>
+  <script>
+    const modalbg = document.getElementById('modal-bg');
+    const modalSwitch = document.getElementById('modal-switch');
+    const modalBox = document.getElementById('modal-box');
+    const modalClose = document.getElementById('modal-close');
+    const modalImg=document.getElementById('modal-img');
+    const modalTitle=document.getElementById('modal-title');
+    const modalRole=document.getElementById('modal-role');
+    const modalDesc=document.getElementById('modal-desc');
+    var teamCard=document.getElementsByClassName('team-card')
+    modalbg.addEventListener("click", function() {
+        modalBox.classList.add('hidden')
+        modalbg.classList.add('hidden')
+        enableScroll()
+    });
+    modalClose.addEventListener("click", function() {
+        modalBox.classList.add('hidden')
+        modalbg.classList.add('hidden')
+        enableScroll()
+    });
+
+
+    for(var i=0; i<teamCard.length;i++){
+        var teamMember =teamCard[i]
+        teamMember.addEventListener('click',teamCardClicked)
+    }
+    function teamCardClicked(event){
+        var teamCard= event.target
+        var title=teamCard.getElementsByClassName('text-center')[0]
+        var teamName=title.getElementsByClassName('team-name')[0].innerText
+        var teamRole=title.getElementsByClassName('team-role')[0].innerText
+        var teamBackground=title.getElementsByClassName('team-background')[0].innerHTML
+        var teamImageSrc=teamCard.getElementsByClassName('team-img')[0].src
+        modalTitle.innerText=teamName
+        modalRole.innerText=teamRole
+        modalDesc.innerHTML=teamBackground
+        modalImg.src=teamImageSrc
+        console.log(teamName,teamRole,teamBackground,teamImageSrc)
+        modalBox.classList.remove('hidden')
+    modalbg.classList.remove('hidden')
+    disableScroll()
+    }
+    function disableScroll() {
+            // Get the current page scroll position
+            scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft =
+            window.pageXOffset || document.documentElement.scrollLeft,
+          
+                // if any scroll is attempted,
+                // set this to the previous value
+                window.onscroll = function() {
+                    window.scrollTo(scrollLeft, scrollTop);
+                };
+        }
+          
+        function enableScroll() {
+            window.onscroll = function() {};
+        }
+</script>
 </html>

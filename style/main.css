@@ -1,0 +1,99 @@
+*{
+    z-index: 1;
+}
+img{
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.bg-green{
+    background-color: #436e11;
+}
+.bg-light-green{
+    background-color: #a7b623;
+}
+.border-lime{
+    border-color: #a7b623;
+}
+
+.text-lime{
+    color: #a7b623;
+}
+.text-green{
+    color: #436e11;
+}
+.text-brown{
+    color:#3f3e2a;
+}
+/* team section */
+.team-card{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.team-card::after {
+    transition-duration: .35s;
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background:rgba(167,182,35,0);
+    z-index: 1;
+}
+.team-card:hover::after {
+    transition-duration: .35s;
+    background:rgba(167,182,35,.25);
+}
+.pointer{
+    transition-timing-function: ease-out;
+}
+.team-card:hover .pointer{
+    transition-duration: .35s;
+    animation: text-transparent;
+    border-color: transparent;
+    animation-duration: .35s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform: scale(1.05);
+}
+@keyframes text-transparent {
+    from{color: transparent;}
+    to{color: transparent;}
+}
+.team-card .text-center{
+    z-index: 100;
+}
+
+#modal-bg{
+    position: fixed; 
+    overflow: hidden;/* Sit on top of the page content */ /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100vh; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0, 0, 0.75);
+    
+}
+.modal-team-background{
+    overflow-y: scroll;
+    height: 10em;
+}
+/* footer */
+.border-gray-700{
+    background-color: transparent;
+    border: 1px solid rgba(0,0, 0, 0.5);
+}
+
+.footer-social{
+    transition-duration: .25s;
+}
+.footer-social:hover,
+.footer-social:focus{
+    background-color: #FFF;
+    color: #436e11;
+    transition-duration: .25s;
+}
