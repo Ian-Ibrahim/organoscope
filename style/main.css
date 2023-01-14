@@ -1,5 +1,70 @@
 *{
     z-index: 1;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: #436e11;
+    color: #FFF;
+}
+a{
+    outline:none;
+}
+.video-docker video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .video-docker::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .video-content {
+    z-index: 2;
+  }
+nav{
+    position: absolute;
+}
+.nav-scrolled{
+    position:fixed;
+    background: white;
+    color:black;
+    top:0;
+    left:0;
+    animation: nav-appear;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.nav-scrolled .nav-links{
+    color:#3f3e2a;
+    }
+
+  .nav-links.active {
+    position: relative;
+  }
+ .nav-links.active::after{
+    content: " ";
+    width:100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-bottom: solid 2px #fff;
+  }
+  .nav-scrolled .nav-links.active::after{
+    border-color: #436e11;
+  }
+
+@keyframes nav-appear{
+    from{top:-100%}
+    to{top:0}
 }
 img{
     object-fit: cover;
@@ -24,47 +89,35 @@ img{
 .text-brown{
     color:#3f3e2a;
 }
+.split-screen{
+    display: flex;
+    flex-wrap: wrap;
+}
+.split-screen>*{
+    flex: 1 1 15em;
+}
+
+/* who */
+.who-img{
+    height: 70vh;
+    object-fit:cover;
+    object-position: 50% 50%;
+    max-width: 100%;
+}
 /* team section */
 .team-card{
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
-.team-card::after {
-    transition-duration: .35s;
-    content: ""; 
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background:rgba(167,182,35,0);
-    z-index: 1;
-}
-.team-card:hover::after {
-    transition-duration: .35s;
-    background:rgba(167,182,35,.25);
-}
-.pointer{
-    transition-timing-function: ease-out;
-}
-.team-card:hover .pointer{
-    transition-duration: .35s;
-    animation: text-transparent;
-    border-color: transparent;
-    animation-duration: .35s;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
-    transform: scale(1.05);
-}
-@keyframes text-transparent {
-    from{color: transparent;}
-    to{color: transparent;}
-}
-.team-card .text-center{
-    z-index: 100;
-}
+.team-card:hover,
+.team-card:focus {
+    transition-duration: .5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+
 
 #modal-bg{
     position: fixed; 
