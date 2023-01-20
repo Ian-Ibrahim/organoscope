@@ -12,7 +12,7 @@
     <title>Organo scope</title>
 
 </head>
-<body>
+<body class="text-justify">
     <nav x-data="{ isOpen: false }" id="nav" class="pr-4  container mx-auto   z-50  lg:flex lg:items-center lg:justify-between">
         <div class="flex items-center justify-between relative">
             <div class=" bg-white relative top:0  p-4 flex  items-center justify-between">
@@ -37,12 +37,13 @@
             <div class="lg:-px-8 flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:space-y-0">
                 <a data-section="home-hero" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 flex-1 nav-links active" href="#home-hero">Home</a>
                 <a data-section="about" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#about">About</a>
+                <a data-section="services" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#services">Services</a>
                 <a data-section="contact" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#contact">Contact</a>
                 <a data-section="team" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#team">Our Team</a>
             </div>
         </div>
     </nav>
-    <section id="home-hero" class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3 home-hero">
+    <section id="home-hero" class="p-3 relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3 home-hero">
         <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
             <video class="min-w-full min-h-full absolute object-cover object-center" src="media/discussions.mp4" type="video/mp4" autoplay muted loop></video>
         </div>
@@ -57,7 +58,7 @@
                 <h2 class="text-sm text-gray-500 font-medium uppercase mb-2">organic farming</h2>
                 <h2 class="mb-4 text-4xl font-extrabold  ">Who we <span class="text-lime">are</span></h2>
                 <p class="mb-4">Organo scope is a startup founded and run by a group of professional Kenyan women based in Kenya and the diaspora. The business's operation being breeding  of the Black soldier fly (BSF) larvae. The BSF larvae would be sold as animal feed with plans being made to eventually produce organic efficient fertilizers for crop farmers.</p>
-                <a href="#learn-more" class="rounded bg-[#436e11] p-3 text-gray-50">Learn more</a>
+                <a href="#learn-more" class="rounded bg-[#436e11] p-3 text-gray-50 duration-300 hover:scale-105 focus:scale-95">Learn more</a>
             </div>
             <div class="flex items-center justify-center ">
                 <div class=" rounded-lg bg-[url('media/bsf-5.jpg')] bg-cover bg-center bg-no-repeat h-96 w-full m-8"></div>
@@ -75,7 +76,7 @@
                             <p class="mb-4">The  activities Organoscope plans to carry out are: 
                                 <ol class="list-disc pl-8">
                                     <li>Raising BSF to produce animal feed and organic fertilizers</li>
-                                    <li>raining women, youth and small-scale farmers to not only raise BSF but provide a source of income and market for their products</li>
+                                    <li>Training women, youth and small-scale farmers to not only raise BSF but provide a source of income and market for their products</li>
                                     <li>Organic waste collection and management .</li>
                                 </ol>
                             </p>
@@ -87,7 +88,7 @@
                     </div>
                     <div class="min-h-[45vh] text-gray-50 w-full bg-[#436e11]">
                         <div class="split-screen items-start">
-                            <div class=" min-h-[45vh] bg-[url('media/tractor.jpg')] bg-cover bg-center bg-no-repeat "></div>
+                            <div class=" min-h-[45vh] bg-[url('media/bsf-2.jpg')] bg-cover bg-center bg-no-repeat "></div>
                             <div>
                                 <div class="flex items-center justify-between p-6 flex-wrap">
                                     <h2 class="font-extrabold  text-xl w-full" >Vision</h2>
@@ -103,13 +104,58 @@
             </div>
         </div>
     </section>
-    <section class=" min-h-full lg:min-h-screen flex  items-center " id="contact">
+    <section class=" p-3 bg-white min-h-screen text-justify" id="services">
+      <div class="flex justify-between items-center  w-full overflow-hidden">
+        <div class=" w-full flex flex-col font-light sm:text-lg">
+          <h2 class="text-sm font-medium uppercase mb-2 text-gray-500">our services</h2>
+          <h2 class="mb-4 text-4xl font-extrabold ">what we <span class="text-lime">do</span></h2>
+          <div class=" place-self-start w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
+              <img src="media/larva.png"  class="w-20 h-20" alt="">
+              <p class="text-black font-semibold">BSF larvae breeding </p>
+              <p class="text-gray-900" >Breeding of BSF and use them to produce animal proteins to supply consumers in Kisumu and eventually throughout Kenya, Africa, and the world.
+              </p>
+            </div>
+            <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
+              <img src="media/waste.png" class="w-20 h-20 duration-300 service-icon" alt="">
+              <p class="text-black font-semibold">Organic waste collection and management</p>
+
+              <p class="text-gray-900" >Collection of organic food waste from local supermarkets, food-based factories, farms and restaurants. 
+              </p>
+            </div>
+            <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
+              <img src="media/fodder.png" class="w-20 h-20" alt="">
+              <p class="text-black font-semibold">Organic animal feed production  </p>
+              <p class="text-gray-900" >We produce and sell BSF larvae as feeds for cattle, pigs and poultry. 
+
+              </p>
+            </div>
+            <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
+              <img src="media/fertilizer.png" class="w-20 h-20" alt="">
+              <p class="text-black font-semibold">Organic Fertilizer production  </p>
+              <div class="h-0 basis-full"></div>
+              <p class="text-gray-900" >We  plan to  produce organic fertilizers in very large quantities to meet the demand for clean organic efficient fertilizers for crop farmers.   
+              </p>
+            </div>
+            <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
+              <img src="media/presentation.png" class="w-20 h-20" alt="">
+              <p class="text-black font-semibold">Training  </p>
+              <div class="h-0 basis-full"></div>
+              <p class="text-gray-900" >Empowering women, youth, and small-scale farmers by providing training in raising Black Soldier Fly (BSF) and creating opportunities for them to earn income and access markets for their products. 
+              </p>
+            </div>
+          </div>  
+          <div class="text-sm">Logos designed by <a class="underline"href="https://www.flaticon.com/authors/freepik">Freepik</a></div>        
+        </div>
+      </div>
+    </section>
+    <section class=" min-h-full lg:min-h-screen flex  items-center p-3" id="contact">
         <div class="flex justify-between items-center  w-full overflow-hidden">
             <div class="w-full relative overflow-hidden p-4 mr-3 hidden lg:block">
                 <div class=" rounded-lg bg-[url('media/contact.jpg')] bg-cover bg-center bg-no-repeat h-96 w-9/12 mx-5"></div>
             </div>
             <div class=" w-full flex flex-col font-light sm:text-lg">
-                <h2 class="text-sm font-medium uppercase mb-2 text-gray-500">get in touch</h2>
+                <h2 class="text-sm font-medium uppercase mb-2 text-gray-500">Get in touch</h2>
                 <h2 class="mb-4 text-4xl font-extrabold ">We'd love to  <span class="text-lime">hear from you!</span></h2>
                 <div class="flex items-center p-3">
                     <i class="fa-solid fa-envelope text-grey-700 pr-4 pl-4"></i>
@@ -135,7 +181,7 @@
                         <a class="text-black" >Nairobi, Kenya.</a>
                     </div>
                 </div>
-                <div class="  flex items-center gap-3 p-4">
+                <!-- <div class="  flex items-center gap-3 p-4">
                     <button class="border-gray-900 border font-normal h-10 w-10 items-center justify-center align-center rounded-full hover:bg-[#436e11] hover:border-[#436e11] duration-300 hover:text-white hover:duration-300" type="button">
                     <i class="fab fa-twitter"></i></button>
                     <button class=" border-gray-900 border font-normal h-10 w-10 items-center justify-center align-center rounded-full hover:bg-[#436e11] hover:border-[#436e11] duration-300 hover:text-white hover:duration-300 " type="button">
@@ -145,19 +191,57 @@
                     <button class=" border-gray-900 border font-normal h-10 w-10 items-center justify-center align-center rounded-full hover:bg-[#436e11] hover:border-[#436e11] duration-300 hover:text-white hover:duration-300" type="button">
                     <i class="fab fa-instagram"></i>
                     </button>
-                </div>             
+                </div>              -->
             </div>
             
         </div>
     </section>
-    <section class="min-h-screen" id="team"> 
+    <section id="contact">
+      <div class="p-3">
+        <div class="mx-auto w-full max-w-lg">
+          <h2 class="mb-4 text-4xl font-extrabold text-center">Leave a <span class="text-lime">message</span></h2>
+          <form class="mt-10">
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="relative z-0">
+                <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0  text-gray-900 focus:border-[#436e11] focus:outline-none focus:ring-0" placeholder=" " required/>
+                <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-base text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#436e11] ">Your name</label>
+              </div>
+              <div class="relative z-0">
+                <input type="email" name="email" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0  text-gray-900 focus:border-[#436e11] focus:outline-none focus:ring-0" placeholder=" " required />
+                <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#436e11]">Your email</label>
+              </div>
+              <div class="relative z-0 col-span-2">
+                <textarea name="message" rows="5" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-[#436e11] focus:border-[#436e11] focus:outline-none focus:ring-0" placeholder=" " required></textarea>
+                <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform  text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#436e11]">Your message</label>
+              </div>
+            </div>
+            <button type="submit" class="mt-5 rounded bg-[#436e11] px-10 py-2 text-white w-full duration-300 hover:scale-105 focus:scale-95">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="p-3 partners">
+      <h2 class="mb-4 text-4xl font-extrabold text-center">Our <span class="text-lime">partners</span></h2>  
+      <div class="flex flex-wrap p-3 justify-between items-center  w-full overflow-hidden">
+        <div class="w-40 h-40">
+          <img src="media/kisumu-removebg-preview.png" alt="Kisumu county government logo">
+        </div>
+        <div class="w-36 uppercase h-40 text-xl font-extrabold text-center flex justify-between items-center">
+          Lolwe <br>aquaculture
+        </div>
+        <div class="w-36 uppercase font-extrabold h-40 text-xl text-center flex justify-between items-center">
+          Subagem <br>Enterprise
+        </div>
+      </div>   
+    </div>
+    <section class="min-h-screen p-3" id="team">  
         <div class="w-full h-full">
             <div id="modal-bg" class=" z-50  hidden "></div>
             <!-- <div id="modal-box" class="hidden fixed z-50 left-0 top-0 w-full h-full overflow-auto bg-white flex flex-col justify-center"> -->
                 <div id="modal-box" class="z-50 sm:w-[385px] sm:min-w-[40vw] min-w-[80vw] min-h-[25vh] flex flex-col justify-center gap-2 -translate-y-1/2 p-5 bg-white rounded-lg top-1/3 left-1/2 -translate-x-1/2 fixed overflow-hidden hidden">
                 <div class="mt-8 lg:-mx-6 lg:flex lg:items-center ">
                     <div class=" w-9/12 p-2 ">
-                        <img class="object-cover w-full rounded-lg w-5/12 h-5/12" id="modal-img" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"alt="">
+                        <img class="object-cover w-full rounded-lg w-5/12 h-5/12" id="modal-img" src=""alt="">
                         <div class="flex items-center mt-6">
                             <div class="mx-4">
                                 <h1 id="modal-title" class="text-sm font-semibold"></h1>
@@ -166,8 +250,8 @@
                         </div>
                     </div>   
                     <div class=" w-full ">
-                        <p  class="text-sm text-green uppercase font-semibold">Background</p>
-                        <div  id="modal-desc" class=" modal-team-background mt-3 text-sm  md:text-sm">
+                        <p  class="text-sm text-green uppercase font-semibold ">Background</p>
+                        <div  id="modal-desc" class=" modal-team-background mt-3 text-sm px-3 md:text-sm">
                             
                         </div>                        
                     </div>
@@ -178,8 +262,8 @@
         </div>
         <div class="flex justify-center items-start my-2">
             <div class="w-full  sm:w-10/12 md:w-1/2 my-1">
-              <h2 class="text-sm font-medium uppercase mb-2">Leadership</h2>
-              <h2 class="text-4xl font-extrabold  mb-2">Meet our <span class="text-lime">team</span> </h2>
+              <h2 class="text-sm font-medium uppercase mb-2"></h2>
+              <h2 class="text-4xl font-extrabold  mb-2  text-center">Meet our <span class="text-lime">team</span> </h2>
               <!-- <p class="text-sm">** click on card to view more</p> -->
               
               <div class=" place-self-start w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -202,6 +286,7 @@
                                 <li>-St. Marys Primary--CPE-- Molo-- Nakuru</li>
                             </ul>
                         </div>
+                        <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more <i class="fa-solid fa-right-long pl-1"></i></button>
                     </div>
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
@@ -216,9 +301,10 @@
                         <div class="hidden team-background">
                             Elizabeth is a Certified Public Accountant of Kenya, brings many years of experience in the agriculture sector as a financial expert who has worked around the East African region. Elizabeth has a deep understanding of finance in Agriculture businesses encompassing production, processing, and marketing.
                         </div>
+                        <button class="text-lime text-right p-4 team-btn overflow-hidden w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more <i class="fa-solid fa-right-long pl-1"></i></button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6  m-2 team-card">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/iscar-director.jpg" alt="photo">
                         
@@ -232,6 +318,7 @@
                             She has a passion for farming and community empowerment.
                              As a nurse she has attended various trainings and workshops on social and community empowerment.
                         </div>
+                        <button class="text-lime p-4 team-btn overflow-hidden w-9/12 whitespace-nowrap hover:w-11/12 duration-300">Read more <i class="fa-solid fa-right-long p"></i></button>
                     </div>
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
@@ -241,7 +328,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Maureen Orlare</p>
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Maureen Orlale</p>
                         <p class="text-base text-brown font-normal team-role">Director</p>
                         <div class="hidden team-background">
                             Maureen is a PhD candidate in the process of completing her doctorate in Business Administration, specializing in leadership.
@@ -251,6 +338,7 @@
                             Most of all, Maureen loves passing on tried and tested advice on what she has picked up along the way
                             to help others (individual and businesses) achievetheir dreams.
                         </div>
+                        <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more <i class="fa-solid fa-right-long pl-1"></i></button>
                     </div>
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
@@ -259,7 +347,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Lydia Kasera</p>
+                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Lydia <br>Kasera</p>
                         <p class="text-base text-brown font-normal team-role">Director</p>
                         <div class="hidden team-background">
                             Lydia Kasera is a creative, results-oriented Education and Curriculum Development Specialist, Human Resource Capacity Building Expert and Organisational Development expert with over 20 years experience in the field.
@@ -268,6 +356,7 @@
                             with over twenty years practical experience working with both the public and private sectors in Africa and UK.
                             Lydia has been engaged as Project Team Leader or Project Director in Human Resource Management (HRM) Consultancies, Institutional Development and Restructuring, Strategic Planning, Public Service Reform, Change Management, Organizational Restructuring and Corporate Reorganization.
                         </div>
+                        <button class="text-lime text-right  team-btn p-3 overflow-hidden w-9/12 whitespace-nowrap hover:w-11/12 duration-300">Read more <i class="fa-solid fa-right-long pl-1"></i></button>
                     </div>
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
@@ -287,6 +376,7 @@
                                 <li>-Bachelor of Arts Degree in sociology from Uiversity of Nairobi</li>
                             </ul>
                         </div>
+                        <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more <i class="fa-solid fa-right-long pl-1"></i></button>
                     </div>
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
@@ -312,6 +402,7 @@
                             host of recognitions from United Nation for her Contribution to Peace keeping Mission Environment.
                             An advisor of the Police & Corrections Forum(PCF) with the International Youth fellowship(IYF), a South Korean NGO.
                         </div>
+                        <button class="text-lime text-right  team-btn overflow-hidden w-8/12 p-3 whitespace-nowrap hover:w-10/12 duration-300">Read more <i class="fa-solid fa-right-long pl-1"></i></button>
                     </div>
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
@@ -326,42 +417,20 @@
                             She is currently in business in Nairobi. A graduate from UON with a degree major in Sociology and minor in communication.
                             Experience. 
                         </div>
+                        <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more <i class="fa-solid fa-right-long pl-1"></i></button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
-                    <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/manyala-director.jpg" alt="photo">
-                    </div>
-                    <div class="text-center">
-                        <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Elizabeth Manyala Mbare</p>
-                        <p class="text-base text-brown font-normal team-role">Director</p>
-                        <div class="hidden team-background">
-                            She is a visionary leader, a researcher using both qualitative and quantitative research methodologies, and a project
-                            designer, coordinator, and implementer of various successful implemented EU projects in Finland and African
-                            countries. She has a wealth of work experience as a Programme Manager in the Humanitarian sector and at the
-                            senior management level in the county government of Kenya, where I exercised an oversight role to the executive
-                            arm of the county government of Kenya to ensure that the implementation of County Integrated Development
-                            Plans (CIDP) is executed.
-                            <span style="display:block;font-weight: 500; color: #a7b623;">Educational background</span>
-                            <ul style=" padding-left: .5em;">
-                                <li>-Doctoral candidate in Leadership and Governance at Jomo Kenyatta University of Agriculture and Technology in Kenya.</li>
-                                <li>-Master of Business Administration degree in Leadership and Service Design from Novia University of Applied Sciences in Finland</li>
-                                <li>- Master of Arts degree in Rural Sociology and Community Development from the University of Nairobi.</li>
-                                <li>-A Professional  Certified Mediator by MTI International USA through its affiliate Mediation Training Institute (MTI) East Africa </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+           
               </div>
             </div>
         </div>
     </section>
-    <div id="learn-more">
+    <div id="learn-more" >
         <!-- <img src="media/world-map-copyright.webp" alt=""> -->
         <div class="w-full  min-h-full p-5  text-center flex justify-center flex-wrap items-center bg-[#3f3e2a]">
             <h2 class="font-extrabold   text-5xl uppercase text-white">Join us today in our journey!</h2>
             <div class="basis-full h-0"></div>
-            <a href="#contact"  rel="noopener noreferrer" class=" rounded uppercase border-2 m-10 p-2 border-white text-3xl text-white duration-300 hover:duration-300 hover:bg-white hover:text-[#3f3e2a]">Contact us</a>
+            <a href="#contact"  rel="noopener noreferrer" class=" rounded uppercase border-2 m-10 p-2 border-white text-3xl text-white duration-300 hover:duration-300 hover:bg-white hover:text-[#3f3e2a] duration-300 hover:scale-105 focus:scale-95">Contact us</a>
         </div>
         <div class="flex justify-center items-start my-2">
             <div class="w-full sm:w-10/12 md:w-1/2 my-1">
@@ -373,7 +442,7 @@
                       @click="handleClick()"
                       class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
                     >
-                      <span>What is Organo scope aim?</span>
+                      <span>What is Organo Scope's aim?</span>
                       <svg
                         :class="handleRotate()"
                         class="fill-current text-green h-6 w-6 transform transition-transform duration-500"
@@ -463,9 +532,9 @@
                       <ul class="p-2">
                         <li><span class="font-semibold">Organo meal</span> <div class="pl-2">This is a feed containing 55% protein which can be used for Chickens,fish and Pets(monogastric animals).</div>
                          </li>
-                        <li><span class="font-semibold">Organo oil</span> <div class="pl-2">This is a pure natural oild with high lauric acid concentration which is used as aquaculture feed, pet food and alternative to fish,coconut and palm oil.</div>
+                        <li><span class="font-semibold">Organo oil</span> <div class="pl-2">This is a pure natural oil with high lauric acid concentration which is used as aquaculture feed, pet food and alternative to fish,coconut and palm oil.</div>
                         </li>
-                        <li><span class="font-semibold">Organo soil </span><div class="pl-2">This is an organic soil conditioner prepared from larval residue containing high nitrogen, phosphorus and potassium which are essential in soil fertility.</div>
+                        <li><span class="font-semibold">Organo soil </span><div class="pl-2">This is an organic soil conditioner prepared from larvae residue containing high nitrogen, phosphorus and potassium which are essential in soil fertility.</div>
                         </li>
                       </ul>
                     </p>
@@ -481,27 +550,15 @@
             <div class="container mx-auto px-4">
               <div class="flex flex-wrap text-left lg:text-left">
                 <div class="w-full lg:w-5/12 px-4">
-                  <h4 class="text-6xl font-extrabold ">Let&#39;s keep in touch!</h4>
-                  <h5 class="text-lg mt-0 mb-2 text-gray-300 ">
-                    Find us on any of these platforms
-                  </h5>
-                  <div class="mt-6 lg:mb-0 mb-6 text-gray-100">
-                    <button class="border-gray-50 border  font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social " type="button">
-                      <i class="fab fa-twitter"></i></button>
-                      <button class=" border-gray-50 border font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social " type="button">
-                        <i class="fa-brands fa-facebook-f"></i></button>
-                      <button class="border-gray-50 border font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social" type="button">
-                      <i class="fab fa-dribbble"></i></button>
-                      <button class=" border-gray-50 border font-normal h-10 w-10 items-center justify-center align-center rounded-full footer-social" type="button">
-                      <i class="fab fa-instagram"></i>
-                    </button>
+                  <h4 class="block uppercase text-gray-50 text-xl font-semibold mb-2 text-sm ">Organo scope LTD. </h4>
+                  <div class="mt-6 lg:mb-0 mb-6 text-gray-200">
+                    The startup, founded and run by a group of professional Kenyan women based in Kenya and the diaspora, aims to raise BSF to produce animal feed and organic fertilizers, as well as train women, youth, and small-scale farmers. Additionally, the company plans to engage in organic waste collection and management.
                   </div>
                 </div>
                 <div class="w-full lg:w-7/12 px-4 bg-gray">
                   <div class="flex flex-wrap items-top mb-6">
                     <div class="w-full lg:w-7/12 px-4 ml-auto  ">
-                      <span class="  block uppercase text-gray-50  text-sm font-extrabold mb-2">Address</span>
-                     
+                      <span class=" block uppercase text-gray-50 text-sm font-semibold mb-2 text-sm">Address</span>
                           <div class="text-gray-200 block pb-2 text-lg">
                             <p>P.O. Box 3920 – 00200, </p>
                             <p>City Square,</p>

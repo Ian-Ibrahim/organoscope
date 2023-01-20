@@ -1,6 +1,6 @@
-const d = new Date();
-document.getElementById("get-current-year").innerHTML=d.getFullYear()
-
+const dateToday = new Date();
+document.getElementById("get-current-year").innerHTML=dateToday.getFullYear()
+//accordion
 document.addEventListener('alpine:init', () => {
   Alpine.store('accordion', {
     tab: 0
@@ -22,6 +22,7 @@ document.addEventListener('alpine:init', () => {
     }
   }));
 })
+//Modal box appear 
 const modalbg = document.getElementById('modal-bg');
 const modalSwitch = document.getElementById('modal-switch');
 const modalBox = document.getElementById('modal-box');
@@ -30,8 +31,7 @@ const modalImg=document.getElementById('modal-img');
 const modalTitle=document.getElementById('modal-title');
 const modalRole=document.getElementById('modal-role');
 const modalDesc=document.getElementById('modal-desc');
-var teamCard=document.getElementsByClassName('team-card')
-
+var teamCard=document.getElementsByClassName('team-btn')
 modalbg.addEventListener("click", function() {
     modalBox.classList.add('hidden')
     modalbg.classList.add('hidden')
@@ -39,14 +39,14 @@ modalbg.addEventListener("click", function() {
 modalClose.addEventListener("click", function() {
     modalBox.classList.add('hidden')
     modalbg.classList.add('hidden')
-    
 });
 for(var i=0; i<teamCard.length;i++){
     var teamMember =teamCard[i]
     teamMember.addEventListener('click',teamCardClicked)
 }
 function teamCardClicked(event){
-    var teamCard= event.target
+    var teamBtn= event.target
+    var teamCard=teamBtn.parentElement.parentElement
     var title=teamCard.getElementsByClassName('text-center')[0]
     var teamName=title.getElementsByClassName('team-name')[0].innerText
     var teamRole=title.getElementsByClassName('team-role')[0].innerText
@@ -60,12 +60,12 @@ function teamCardClicked(event){
     modalBox.classList.remove('hidden')
     modalbg.classList.remove('hidden')
 }
+
+// navigation bar appear and add the sticky
 window.addEventListener("scroll", function() {
     var sections = document.querySelectorAll("section");
     var navLinks = document.querySelectorAll(".nav-links");
-  
     var currentPosition = window.scrollY + 150;
-  
     sections.forEach(function(section) {
       var sectionTop = section.offsetTop;
       var id = section.getAttribute("id");
