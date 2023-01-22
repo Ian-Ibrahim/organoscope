@@ -37,10 +37,12 @@ position: absolute;
 }
 .nav-scrolled{
 position:fixed;
+width: 100%;
 background: white;
 color:black;
 top:0;
 left:0;
+right:0;
 animation: nav-appear;
 animation-duration: 1s;
 animation-iteration-count: 1;
