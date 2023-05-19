@@ -1,3 +1,6 @@
+//vnav bar
+const navigationHeight=document.querySelector('nav').offsetHeight;
+document.documentElement.style.setProperty('--scroll-padding',navigationHeight-2+"px");
 const dateToday = new Date();
 document.getElementById("get-current-year").innerHTML=dateToday.getFullYear()
 //accordion

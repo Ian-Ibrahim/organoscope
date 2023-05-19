@@ -17,18 +17,18 @@
         <div class="flex items-center justify-between relative">
             <div class=" bg-white relative top:0  p-2 flex  items-center justify-between">
                 <a class="#home-hero " href="#">
-                    <img src="media/logo.svg" class="w-16"alt="">
+                    <img src="media/logo.svg" loading="eager" class="w-16" alt="">
                 </a>
             </div>
             <!-- Mobile menu button -->
             <div class="flex lg:hidden float-right text-white">
-                <button x-cloak @click="isOpen = !isOpen" type="button" class="text-black  focus:outline-none " aria-label="toggle menu">
-                <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#a7b623" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                </svg>
-                <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#a7b623" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <button x-cloak @click="isOpen = !isOpen" type="button" class="text-black focus:outline-none" aria-label="toggle menu">
+                    <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#a7b623" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                    </svg>
+                    <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#a7b623" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                 </button>
             </div>
         </div>
@@ -36,16 +36,25 @@
         <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full bg-white px-6 py-4 shadow-md transition-all duration-300 ease-in-out  lg:relative lg:top-0 lg:mt-0 lg:flex lg:w-auto lg:translate-x-0 lg:items-center lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none ">
             <div class="lg:-px-8 flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:space-y-0">
                 <a data-section="home-hero" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 flex-1 nav-links active" href="#home-hero">Home</a>
-                <a data-section="about" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#about">About</a>
+                <!-- <a data-section="about" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#about">About</a> -->
+                <div data-section="about" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links"  x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+                    <a @click="dropdownOpen = !dropdownOpen" >About</a>
+                    <div x-show="dropdownOpen" class="absolute bg-white shadow-lg rounded mt-2 py-2 w-48" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+                        <a class="block px-4 py-2 text-black hover:bg-gray-200" href="#whoWeAre">Who we are</a>
+                        <a class="block px-4 py-2 text-black hover:bg-gray-200" href="#ourActivities">Our activities</a>
+                    </div>
+                </div>
+                
                 <a data-section="services" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#services">Services</a>
                 <a data-section="contact" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#contact">Contact</a>
                 <a data-section="team" class="transform text-black lg:text-gray-50 p-2 duration-300 hover:bg-[#436e11] hover:text-white lg:mx-8 nav-links" href="#team">Our Team</a>
             </div>
         </div>
     </nav>
+
     <section id="home-hero" class="p-3 relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3 home-hero">
         <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-            <video class="min-w-full min-h-full absolute object-cover object-center" src="media/discussions.mp4" type="video/mp4" autoplay muted loop></video>
+            <video class="min-w-full min-h-full absolute object-cover object-center"  src="media/discussions.mp4" type="video/mp4" autoplay muted loop></video>
         </div>
         <div class="video-content space-y-2">
             <h2 class="mb-4 uppercase text-3xl  font-extrabold text-gray-50 lg:text-6xl md:text-5xl ">Welcome to <span class="text-lime  mt-2">Organo scope Ltd</span></h2>
@@ -54,7 +63,7 @@
         </div>
     </section>
     <section class="bg-white min-h-screen" id="about">
-        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6" id="whoWeAre">
             <div class="font-light  sm:text-lg ">
                 <h2 class="text-sm text-gray-500 font-medium uppercase mb-2">organic farming</h2>
                 <h2 class="mb-4 text-4xl font-extrabold  ">Who we <span class="text-lime">are</span></h2>
@@ -66,7 +75,7 @@
                 <div class="hidden  rounded-lg bg-[url('media/bsf-1.jpg')] bg-cover bg-left bg-no-repeat h-96 w-full md:inline-block"></div>
             </div>
         </div>
-        <div class="min-h-screen">
+        <div class="min-h-screen" id="ourActivities">
             <div class="split-screen min-h-screen overflow-hidden">
                 <div class="bg-[url('media/bsf-2.jpg')] bg-cover bg-center bg-no-repeat bg"></div>
                 <div class=" w-full flex flex-col sm:text-lg  ">
@@ -77,8 +86,8 @@
                             <p class="mb-4">
                                 <ol class="list-disc pl-8">
                                     <li>Raising BSF to produce animal feed and organic fertilizers.</li>
-                                    <li>Training women, youth and small-scale farmers to  raise BSF as a source of income .</li>
-                                    <li>Pre-identified organic waste collection and management .</li>
+                                    <li>Training women, youth and small-scale farmers to  raise BSF as a source of income.</li>
+                                    <li>Pre-identified organic waste collection and management.</li>
                                 </ol>
                             </p>
                         </div>
@@ -104,20 +113,20 @@
           <h2 class="mb-4 text-4xl font-extrabold ">What we <span class="text-lime">do</span></h2>
           <div class=" place-self-start w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="flex w-11/12 flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
-              <img src="media/larva.png"  class="w-20 h-20" alt="">
+              <img src="media/larva.png" loading="lazy" class="w-20 h-20" alt="">
               <p class="text-black font-semibold">BSF larvae breeding </p>
               <p class="text-gray-900" >Breeding of BSF and using them to produce animal proteins to supply consumers in Kenya and eventually throughout East Africa and the world.
               </p>
             </div>
             <div class="flex w-11/12 flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
-              <img src="media/waste.png" class="w-20 h-30 duration-300 service-icon" alt="">
+              <img src="media/waste.png" loading="lazy"  class="w-20 h-30 duration-300 service-icon" alt="">
               <p class="text-black font-semibold">Organic waste collection and management</p>
 
               <p class="text-gray-900" >Collection of organic food waste from local supermarkets, food-based factories, farms and restaurants. 
               </p>
             </div>
             <div class="flex w-11/12 flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
-              <img src="media/fodder.png" class="w-24 h-30" alt="">
+              <img src="media/fodder.png" loading="lazy"  class="w-24 h-30" alt="">
               <p class="text-black font-semibold">Organic animal feed production  </p>
               <p class="text-gray-900" >Production and selling  BSF larvae as feeds for cattle, pigs and poultry. 
 
@@ -125,7 +134,7 @@
             </div>
             <div class="flex w-11/12 flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card relative">
               <!-- <span class="absolute top-2 right-2 bg-[#436e11] text-white p-1 rounded">Future Goal</span> -->
-              <img src="media/fertilizer.png" class="w-20 h-20" alt="">
+              <img src="media/fertilizer.png" loading="lazy"  class="w-20 h-20" alt="">
               <p class="text-black font-semibold">Organic Fertilizer production  </p>
 
               <p class="text-gray-900" >Production of organic soil fertilizers.    
@@ -133,22 +142,22 @@
             </div>
             <div class="flex w-11/12 flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card relative">
               <!-- <span class="absolute top-2 right-2 bg-[#436e11] text-white p-1 rounded">Future Goal</span> -->
-              <img src="media/organic-food.png" class="w-20 h-20" alt="">
+              <img src="media/organic-food.png" loading="lazy"  class="w-20 h-20" alt="">
               <p class="text-black font-semibold">Organic Farming  </p>
 
-              <p class="text-gray-900" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, sed aliquid! Provident, incidunt! Facilis iste sint saepe minus, nam animi magni nemo exercitationem soluta possimus sapiente et repellat laborum eos.    
+              <p class="text-gray-900" > Farming using our organic soil fertilizers made with BSF.    
               </p>
             </div>
             <div class="flex w-11/12 flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card relative">
               <!-- <span class="absolute top-2 right-2 bg-[#436e11] text-white p-1 rounded">Future Goal</span> -->
-              <img src="media/chicken.png" class="w-20 h-20" alt="">
+              <img src="media/chicken.png" loading="lazy"  class="w-20 h-20" alt="">
               <p class="text-black font-semibold">Poultry Farming</p>
 
-              <p class="text-gray-900" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, sed aliquid! Provident, incidunt! Facilis iste sint saepe minus, nam animi magni nemo exercitationem soluta possimus sapiente et repellat laborum eos.    
+              <p class="text-gray-900" >Chicken rearing which are fed with our BSF larvae.    
               </p>
             </div>
             <div class="flex w-11/12 flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
-              <img src="media/presentation.png" class="w-20 h-20" alt="">
+              <img src="media/presentation.png" loading="lazy"  class="w-20 h-20" alt="">
               <p class="text-black font-semibold">Training  </p>
               <div class="h-0 basis-full"></div>
               <p class="text-gray-900" >Empowerment of women, youth, and small-scale farmers by providing training in raising BSF and creation of  opportunities for them to earn income and access markets for their products. 
@@ -234,7 +243,7 @@
       <h2 class="mb-4 text-4xl font-extrabold text-center">Our <span class="text-lime">partners</span></h2>  
       <div class="flex flex-wrap p-3 justify-between items-center  w-full overflow-hidden">
         <div class="w-40 h-40">
-          <img src="media/kisumu-removebg-preview.png" alt="Kisumu county government logo">
+          <img src="media/kisumu-removebg-preview.png" loading="lazy"  alt="Kisumu county government logo">
         </div>
         <div class="w-36 uppercase h-40 text-xl font-extrabold text-center flex justify-between items-center">
           Lolwe <br>aquaculture Ltd.
@@ -282,7 +291,7 @@
               <div class=" place-self-start w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/hildabeda.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/hildabeda.jpg" alt="photo">
                         
                     </div>
                     <div class="text-center">
@@ -304,7 +313,7 @@
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/elizabeth-director.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/elizabeth-director.jpg" alt="photo">
                         
                     </div>
                     
@@ -319,7 +328,7 @@
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6  m-2 team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/iscar-director.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/iscar-director.jpg" alt="photo">
                         
                     </div>
                     
@@ -336,7 +345,7 @@
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/olare-director.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/olare-director.jpg" alt="photo">
 
                     </div>
                     
@@ -356,7 +365,7 @@
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img " decoding="async" src="media/lydia-director.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img " loading="lazy"  decoding="async" src="media/lydia-director.jpg" alt="photo">
                     </div>
                     
                     <div class="text-center">
@@ -374,7 +383,7 @@
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/grace-director.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/grace-director.jpg" alt="photo">
                     </div>
                     
                     <div class="text-center">
@@ -394,7 +403,7 @@
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/olivia-director.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/olivia-director.jpg" alt="photo">
                     </div>
                     
                     <div class="text-center">
@@ -420,7 +429,7 @@
                 </div>
                 <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
                     <div class="mb-6 relative">
-                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" decoding="async" src="media/miriam director.jpg" alt="photo">
+                        <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/miriam director.jpg" alt="photo">
                     </div>
                     <div class="text-center">
                         <p class="text-xl font-semibold text-black font-bold mb-2 team-name">Mildred   Omondi</p>

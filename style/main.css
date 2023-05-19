@@ -3,6 +3,9 @@ z-index: 1;
 scroll-behavior: smooth;
 box-sizing: border-box;
 }
+html{
+    scroll-padding-top: var(--scroll-paddding,100px) ;
+}
 ::selection{
 background-color: rgba(67, 110, 17,0.8);
 color: #FFF;
