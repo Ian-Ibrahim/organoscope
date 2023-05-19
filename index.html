@@ -7,12 +7,18 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script src="https://kit.fontawesome.com/c5d17fdd58.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="style/main.css">
     <style></style>
     <title>Organo scope LTD</title>
 
 </head>
 <body class="text-justify">
+
+  <script>
+    AOS.init();
+  </script>
     <nav x-data="{ isOpen: false }" id="nav" class="pr-4 mx-auto z-50 lg:flex lg:items-center lg:justify-between w-full">
         <div class="flex items-center justify-between relative">
             <div class=" bg-white relative top:0  p-2 flex  items-center justify-between">
@@ -63,22 +69,22 @@
         </div>
     </section>
     <section class="bg-white min-h-screen" id="about">
-        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6" id="whoWeAre">
-            <div class="font-light  sm:text-lg ">
+        <div  class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6" id="whoWeAre">
+            <div class="font-light  sm:text-lg " >
                 <h2 class="text-sm text-gray-500 font-medium uppercase mb-2">organic farming</h2>
                 <h2 class="mb-4 text-4xl font-extrabold  ">Who we <span class="text-lime">are</span></h2>
                 <p class="mb-4">Organo scope Ltd is a startup founded and run by a group of professional Kenyan women based in Kenya and the diaspora. Organo scope limited breeds Black Soldier Fly(BSF) to consume and convert organic waste into products such as animal feed and fertilizer.</p>
                 <!-- <a href="#learn-more" class="rounded bg-[#436e11] p-3 text-gray-50 duration-300 hover:scale-105 focus:scale-95">Learn more</a> -->
             </div>
-            <div class="flex items-center justify-center ">
+            <div class="flex items-center justify-center" data-aos="fade-left"  data-aos-duration="500" >
                 <div class=" rounded-lg bg-[url('media/bsf-5.jpg')] bg-cover bg-center bg-no-repeat h-96 w-full m-8"></div>
                 <div class="hidden  rounded-lg bg-[url('media/bsf-1.jpg')] bg-cover bg-left bg-no-repeat h-96 w-full md:inline-block"></div>
             </div>
         </div>
         <div class="min-h-screen" id="ourActivities">
             <div class="split-screen min-h-screen overflow-hidden">
-                <div class="bg-[url('media/bsf-2.jpg')] bg-cover bg-center bg-no-repeat bg"></div>
-                <div class=" w-full flex flex-col sm:text-lg  ">
+                <div class="bg-[url('media/bsf-2.jpg')] bg-cover bg-center bg-no-repeat bg" data-aos="fade-right"  data-aos-duration="500" ></div>
+                <div class=" w-full flex flex-col sm:text-lg">
                     <div class="p-[2em] mb-auto"> 
                         <div class="font-light ">
                             <h2 class="text-sm font-medium uppercase mb-2 text-gray-500"> </h2>
@@ -170,7 +176,7 @@
     </section>
     <section class=" min-h-full lg:min-h-screen flex  items-center p-3" id="contact">
         <div class="flex justify-between items-center  w-full overflow-hidden">
-            <div class="w-full relative overflow-hidden p-4 mr-3 hidden lg:block">
+            <div class="w-full relative overflow-hidden p-4 mr-3 hidden lg:block" data-aos="fade-right"  data-aos-duration="500" >
                 <div class=" rounded-lg bg-[url('media/contact.jpg')] bg-cover bg-center bg-no-repeat h-96 w-9/12 mx-5"></div>
             </div>
             <div class=" w-full flex flex-col font-light sm:text-lg">
@@ -288,8 +294,8 @@
               <h2 class="text-4xl font-extrabold  mb-2  text-center">Meet our <span class="text-lime">team</span> </h2>
               <!-- <p class="text-sm">** click on card to view more</p> -->
               
-              <div class=" place-self-start w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card">
+              <div class=" place-self-start w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6" >
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 shadow-md team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/hildabeda.jpg" alt="photo">
                         
@@ -311,7 +317,7 @@
                         <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more </button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/elizabeth-director.jpg" alt="photo">
                         
@@ -326,7 +332,7 @@
                         <button class="text-lime text-right p-4 team-btn overflow-hidden w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more </button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6  m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6  m-2 team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/iscar-director.jpg" alt="photo">
                         
@@ -343,7 +349,7 @@
                         <button class="text-lime p-4 team-btn overflow-hidden w-9/12 whitespace-nowrap hover:w-11/12 duration-300">Read more <i class="fa-solid fa-right-long p"></i></button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/olare-director.jpg" alt="photo">
 
@@ -363,7 +369,7 @@
                         <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more </button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img " loading="lazy"  decoding="async" src="media/lydia-director.jpg" alt="photo">
                     </div>
@@ -381,7 +387,7 @@
                         <button class="text-lime text-right  team-btn p-3 overflow-hidden w-11/12 whitespace-nowrap hover:w-11/12 duration-300">Read more </button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/grace-director.jpg" alt="photo">
                     </div>
@@ -401,7 +407,7 @@
                         <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more </button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/olivia-director.jpg" alt="photo">
                     </div>
@@ -427,7 +433,7 @@
                         <button class="text-lime text-right  team-btn overflow-hidden w-8/12 p-3 whitespace-nowrap hover:w-10/12 duration-300">Read more </button>
                     </div>
                 </div>
-                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card">
+                <div class="flex w-full flex-col justify-center items-center rounded-lg p-6 m-2 team-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                     <div class="mb-6 relative">
                         <img class="object-center object-cover rounded-full h-36 w-36 team-img" loading="lazy"  decoding="async" src="media/miriam director.jpg" alt="photo">
                     </div>
@@ -442,7 +448,6 @@
                         <button class="text-lime text-right  team-btn overflow-hidden p-3 w-8/12 whitespace-nowrap hover:w-10/12 duration-300">Read more </button>
                     </div>
                 </div>
-           
               </div>
             </div>
         </div>

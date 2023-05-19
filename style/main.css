@@ -5,6 +5,8 @@ box-sizing: border-box;
 }
 html{
     scroll-padding-top: var(--scroll-paddding,100px) ;
+    width:100vw;
+    overflow-x: hidden;
 }
 ::selection{
 background-color: rgba(67, 110, 17,0.8);
